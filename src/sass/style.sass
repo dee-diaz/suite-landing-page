@@ -126,14 +126,15 @@ body
     padding-top: 155px
     &__content
         height: 545px
+        padding-right: 125px
         background-color: var(--black)
         border-radius: 15px
         display: flex
         justify-content: flex-end
         align-items: center
+        position: relative
     &__text-content
         font-feature-settings: 'clig' off, 'liga' off
-        margin-right: 125px
         max-width: 350px
         color: var(--beige)
     &__title
@@ -160,10 +161,23 @@ body
         text-transform: uppercase
         line-height: 26px
         letter-spacing: 2.5px
+    &__imgbox
+        height: 110%
+        width: auto
+        z-index: 100
+        position: absolute
+        bottom: 0
+        left: 12%
+        img
+            height: 100%
 
-.bg-color-change
-    z-index: -100
-    background-color: var(--beige)
-    width: 100%
-    height: 40%
-
+.circle
+    width: 294px
+    height: 294px
+    position: absolute
+    bottom: 7%
+    left: 15%
+    border-radius: 294px
+    opacity: 0.4762355387210846
+    background: #DB65E2
+    filter: blur(67.95704650878906px)
