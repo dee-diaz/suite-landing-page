@@ -1,3 +1,169 @@
-@import "./reset.scss"
-@import "./normalize.scss"
-// IMPORT FONT HERE! 
+@import "reset.scss"
+@import "normalize.scss"
+// FONT
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap')
+
+// COLORS
+:root
+    --black: #172339
+    --grey: #49566D
+    --beige: #F3EDE7
+    --bg-color: #FAF8F6
+    --purple: #A060FF
+    --pink: #CB30E3
+    --orange: #FFA84E
+
+// TYPOGRAPHY
+
+$heading-xl: 72px
+$heading-l: 48px
+$heading-m: 18px
+$heading-s: 16px
+$quote: 20px
+
+*
+    box-sizing: border-box
+
+body
+    font-family: 'Epilogue', sans-serif
+    background-color: var(--bg-color)
+
+[class*="__container"]
+    max-width: 1110px
+    margin: 0 auto
+
+.header
+    padding-top: 50px
+    &__container
+        display: flex
+        justify-content: space-between
+
+.btn
+    border-radius: 6px
+    cursor: pointer
+    font-size: 16px
+    font-weight: 700
+    line-height: 32px
+    letter-spacing: -0.18px
+    transition: all .3s ease
+    background: transparent
+    &_primary
+        padding: 15px 31px
+        border: none
+        background-color: var(--black)
+        color: #fff
+        &:hover
+            background: linear-gradient(135deg, #A060FF 0%, #CB30E3 49.21%, #FFA84E 100%)
+    &_secondary
+        background-color: transparent
+        padding: 12px 24px
+        border: 1px solid var(--black)
+        @media (any-hover: hover)
+            &:hover
+                background-color: var(--black)
+                color: #fff
+
+.hero-section
+    padding-top: 67px
+    &__container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        position: relative
+        height: 600px
+    &__textbox
+        max-width: 635px
+        position: relative
+    &__title
+        color: var(--black)
+        font-size: $heading-xl
+        font-feature-settings: 'clig' off, 'liga' off
+        font-weight: 400
+        line-height: 78px
+        letter-spacing: -1px
+        margin: 0
+        margin-bottom: 40px
+        span
+            font-weight: 700
+    &__text
+        max-width: 350px
+        font-size: 18px
+        color: var(--grey)
+        margin-bottom: 52px
+        line-height: 32px
+    svg
+        position: absolute
+        top: -12%
+        right: 9%
+    &__img
+        position: absolute
+        left: 42.6%
+        height: 100%
+        width: auto
+        z-index: -10
+        img
+            height: 100%
+
+.stats
+    display: flex
+    flex-direction: column
+    gap: 63px
+    padding-right: 82px
+    &__number
+        font-size: $heading-l
+        font-weight: 700
+        line-height: 56px
+        letter-spacing: -0.5px
+        color: var(--black)
+    &__desc
+        font-size: $heading-s
+        font-weight: 400
+        line-height: 26px
+        letter-spacing: 2.5px
+        text-transform: uppercase
+
+.section-quote
+    padding-top: 155px
+    &__content
+        height: 545px
+        background-color: var(--black)
+        border-radius: 15px
+        display: flex
+        justify-content: flex-end
+        align-items: center
+    &__text-content
+        font-feature-settings: 'clig' off, 'liga' off
+        margin-right: 125px
+        max-width: 350px
+        color: var(--beige)
+    &__title
+        font-size: $heading-l
+        color: var(--bg-color)
+        line-height: 56px
+        letter-spacing: -0.5px
+        margin-bottom: 40px
+        span
+            font-weight: 700
+    &__quote
+        font-size: $quote
+        line-height: 175%
+        margin-bottom: 40px
+    &__name
+        color: var(--bg-color)
+        font-size: $heading-m
+        text-transform: uppercase
+        font-weight: 700
+        line-height: 32px
+        letter-spacing: -0.18px
+    &__role
+        font-size: $heading-s
+        text-transform: uppercase
+        line-height: 26px
+        letter-spacing: 2.5px
+
+.bg-color-change
+    z-index: -100
+    background-color: var(--beige)
+    width: 100%
+    height: 40%
+
