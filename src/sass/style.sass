@@ -124,14 +124,11 @@ body
         max-width: 350px
         font-size: 18px
         color: var(--grey)
-        margin-bottom: 52px
+        margin-bottom: clamp(2rem, 1.56rem + 1.88vw, 3.25rem)
         line-height: 32px
         @media (max-width: 991px)
             font-size: 16px
-            margin-bottom: 40px
             line-height: 28px
-        @media (max-width: 375px)
-            margin-bottom: 32px
     svg
         width: 289px
         height: 35px
@@ -140,8 +137,10 @@ body
         right: 9%
         @media (max-width: 991px)
             width: 231px
-            right: 14%
+        @media (max-width: 575px)
+            display: none
         @media (max-width: 375px)
+            display: block
             width: 151px
     &__img
         position: absolute
