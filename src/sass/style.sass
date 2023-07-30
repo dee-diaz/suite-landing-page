@@ -27,16 +27,28 @@ $quote: 20px
 body
     font-family: 'Epilogue', sans-serif
     background-color: var(--bg-color)
+    overflow-x: hidden
 
 [class*="__container"]
     max-width: 1110px
     margin: 0 auto
+    @media (max-width: 1199px)
+        max-width: 960px
+    @media (max-width: 991px)
+        max-width: 720px
+    @media (max-width: 767px)
+        max-width: 689px
+    @media (max-width: 575px)
+        max-width: 95%
+    @media (max-width: 375px)
+        max-width: 95%
 
 .header
     padding-top: 50px
     &__container
         display: flex
         justify-content: space-between
+        align-items: center
 
 .btn
     border-radius: 6px
@@ -62,18 +74,33 @@ body
             &:hover
                 background-color: var(--black)
                 color: #fff
+        @media (max-width: 375px)
+            font-size: 14px
+            padding: 12px 16px
 
 .hero-section
     padding-top: 67px
+    @media (max-width: 991px)
+        margin-bottom: 100px
+    @media (max-width: 575px)
+        padding-top: 0
     &__container
         display: flex
         justify-content: space-between
         align-items: center
         position: relative
         height: 600px
+        @media (max-width: 991px)
+            flex-wrap: wrap
+        @media (max-width: 575px)
+            height: 990px
+            align-items: flex-start
     &__textbox
         max-width: 635px
         position: relative
+        @media (max-width: 991px)
+            max-width: 494px
+            top: 10%
     &__title
         color: var(--black)
         font-size: $heading-xl
@@ -85,30 +112,74 @@ body
         margin-bottom: 40px
         span
             font-weight: 700
+        @media (max-width: 991px)
+            font-size: 56px
+            line-height: 64px
+        @media (max-width: 375px)
+            font-size: 38px
+            line-height: 44px
+            margin-bottom: 32px
+            letter-spacing: -0.528px
     &__text
         max-width: 350px
         font-size: 18px
         color: var(--grey)
         margin-bottom: 52px
         line-height: 32px
+        @media (max-width: 991px)
+            font-size: 16px
+            margin-bottom: 40px
+            line-height: 28px
+        @media (max-width: 375px)
+            margin-bottom: 32px
     svg
+        width: 289px
+        height: 35px
         position: absolute
         top: -12%
         right: 9%
+        @media (max-width: 991px)
+            width: 231px
+            right: 14%
+        @media (max-width: 375px)
+            width: 151px
     &__img
         position: absolute
         left: 42.6%
         height: 100%
         width: auto
         z-index: -10
+        @media (max-width: 991px)
+            height: 482px
+            left: initial
+            top: 0
+            right: 0
+        @media (max-width: 575px)
+            position: relative
+            top: 15%
+            height: 240px
+            width: 100%
         img
             height: 100%
+            @media (max-width: 575px)
+                width: 100%
 
 .stats
     display: flex
     flex-direction: column
     gap: 63px
     padding-right: 82px
+    @media (max-width: 991px)
+        width: 100%
+        flex-direction: row
+        justify-content: space-between
+        padding-right: 0
+        margin-top: 200px
+    @media (max-width: 575px)
+        flex-direction: column
+        transform: translateX(40%)
+    @media (max-width: 375px)
+        transform: translateX(35%)
     &__number
         font-size: $heading-l
         font-weight: 700
@@ -125,6 +196,13 @@ body
 .section-quote
     padding-top: 155px
     position: relative
+    @media (max-width: 575px)
+        padding-top: 305px
+    @media (max-width: 375px)
+        padding-top: 260px
+    &__container
+        @media (max-width: 575px)
+            max-width: 100%
     &__content
         height: 545px
         padding-right: 125px
@@ -134,10 +212,20 @@ body
         justify-content: flex-end
         align-items: center
         position: relative
+        @media (max-width: 991px)
+            height: 684px
+            padding: 64px 58px
+            align-items: flex-end
+        @media (max-width: 575px)
+            height: 748px
+            padding: 64px 26px
     &__text-content
         font-feature-settings: 'clig' off, 'liga' off
         max-width: 350px
         color: var(--beige)
+        @media (max-width: 991px)
+            text-align: center
+            max-width: 100%
     &__title
         font-size: $heading-l
         color: var(--bg-color)
@@ -146,10 +234,16 @@ body
         margin-bottom: 40px
         span
             font-weight: 700
+        @media (max-width: 991px)
+            font-size: 40px
+            line-height: 48px
     &__quote
         font-size: $quote
         line-height: 175%
         margin-bottom: 40px
+        @media (max-width: 991px)
+            font-size: 18px
+            line-height: 32px
     &__name
         color: var(--bg-color)
         font-size: $heading-m
@@ -169,12 +263,31 @@ body
         position: absolute
         bottom: 0
         left: 10%
+        @media (max-width: 991px)
+            height: 402px
+            bottom: initial
+            left: 34%
+            top: -26%
+        @media (max-width: 575px)
+            left: 30%
+            top: -23%
+        @media (max-width: 575px)
+            left: 18%
         img
             height: 100%
     &__deco
         position: absolute
         left: 47%
         top: 31%
+        @media (max-width: 1199px)
+            display: none
+        @media (max-width: 991px)
+            display: block
+            width: 49px
+            top: 38%
+        @media (max-width: 375px)
+            left: 42%
+            top: 36%
 
 .circle
     width: 294px
@@ -186,7 +299,17 @@ body
     opacity: 0.4762355387210846
     background: #DB65E2
     filter: blur(67.95704650878906px)
-
+    @media (max-width: 991px)
+        width: 197px
+        height: 197px
+        bottom: initial
+        top: 0
+        left: 36%
+    @media (max-width: 575px)
+        width: 100px
+        height: 100px
+        top: 10%
+        left: 40%
 .bg-change
     position: absolute
     bottom: 0
@@ -203,6 +326,10 @@ body
     &__container
         display: flex
         justify-content: space-between
+        @media (max-width: 375px)
+            flex-direction: column
+            align-items: center
+            gap: 33px
     &__copyright
         color: var(--grey)
         font-size: 15px
